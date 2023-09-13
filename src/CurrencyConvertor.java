@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class CurrencyConvertor {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-
         System.out.print("Enter the amount in Indian Rupees (INR): ");
         double INR = in.nextDouble();
 
@@ -19,7 +18,7 @@ public class CurrencyConvertor {
         double amtJPY = convert(INR, rateJPY);
         double amtGBP = convert(INR, rateGBP);
 
-        System.out.println("Converted amts:");
+        System.out.println("Converted amtount:");
         System.out.println("USD: " + amtUSD);
         System.out.println("EUR: " + amtEUR);
         System.out.println("AED: " + amtAED);
@@ -27,8 +26,7 @@ public class CurrencyConvertor {
         System.out.println("GBP: " + amtGBP);
         in.close();
     }
-
-    private static double convert(double amt, double exchangeRate) {
-        return amt * exchangeRate;
+    private static double convert(double amt, double Rate) {
+        return amt * Rate;
     }
 }
